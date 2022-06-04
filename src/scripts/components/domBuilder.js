@@ -1,3 +1,5 @@
+import renderToDOM from '../helpers/renderToDOM';
+
 const domBuilder = () => {
   const domString = `
   <div id="navigation"></div>
