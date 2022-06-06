@@ -5,9 +5,11 @@ import filterButttons from '../components/filterButtons';
 import { showCards } from '../components/cardsPage';
 import logoutButton from '../components/logoutButton';
 import navEvents from '../components/Events/navEvents';
+import formEvents from '../components/Events/formEvents';
 
 const startApp = () => {
   domBuilder();
+  formEvents();
   navBar();
   filterButttons();
   logoutButton();
