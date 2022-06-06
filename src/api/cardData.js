@@ -55,6 +55,6 @@ const updateCard = (cardObject) => new Promise((resolve, reject) => {
 
 // TODO: filter Card by Language
 
-export default {
+export {
   getCards, getSingleCard, createCard, deleteCard, updateCard
 };
