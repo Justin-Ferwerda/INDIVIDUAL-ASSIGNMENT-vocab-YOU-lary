@@ -21,8 +21,8 @@ const showCards = (array) => {
         <li class="list-group-item">${card.languageTech}</li>
       </ul>
       <div class="card-body">
-      <i id="edit-book-btn--${card.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-      <i id="delete-book-btn--${card.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+      <i id="edit-card--${card.firebaseKey}" class="fas fa-edit btn btn-info"></i>
+      <i id="delete-card--${card.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
       </div>
     </div>
     `;

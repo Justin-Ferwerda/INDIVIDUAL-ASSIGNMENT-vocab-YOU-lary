@@ -1,20 +1,20 @@
 import { getCards } from '../../api/cardData';
 import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
-import filterButttons from '../components/filterButtons';
+import filterButtons from '../components/filterButtons';
 import { showCards } from '../components/cardsPage';
-import logoutButton from '../components/logoutButton';
 import navEvents from '../components/Events/navEvents';
 import formEvents from '../components/Events/formEvents';
+import domEvents from '../components/Events/domEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
-  formEvents();
+  domEvents(user.uid);
+  formEvents(user.uid);
   navBar();
-  filterButttons();
-  logoutButton();
+  filterButtons();
   navEvents();
-  getCards().then((cardsArray) => showCards(cardsArray));
+  getCards(user.uid).then((cardsArray) => showCards(cardsArray));
 };
 
 export default startApp;
