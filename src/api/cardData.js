@@ -4,8 +4,8 @@ import firebaseConfig from './apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // TODO: Get all cards
-const getCards = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/cards.json`)
+const getCards = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cards/.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -30,16 +30,16 @@ const createCard = (cardObject) => new Promise((resolve, reject) => {
       const payload = { firebaseKey: response.data.name };
       axios.patch(`${dbUrl}/cards/${response.data.name}.json`, payload)
         .then(() => {
-          getCards().then(resolve);
+          getCards(cardObject.uid).then(resolve);
         });
     }).catch(reject);
 });
 
 // TODO: Delete Card
-const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteCard = (firebaseKey, uid) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/cards/${firebaseKey}.json`)
     .then(() => {
-      getCards(firebaseKey).then((cardsArray) => resolve(cardsArray));
+      getCards(uid).then((cardsArray) => resolve(cardsArray));
     })
     .catch((error) => reject(error));
 });
@@ -48,7 +48,7 @@ const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
 const updateCard = (cardObject) => new Promise((resolve, reject) => {
   axios.patch(`${dbUrl}/cards/${cardObject.firebaseKey}.json`, cardObject)
     .then(() => {
-      getCards().then(resolve);
+      getCards(cardObject.uid).then(resolve);
     })
     .catch(reject);
 });
