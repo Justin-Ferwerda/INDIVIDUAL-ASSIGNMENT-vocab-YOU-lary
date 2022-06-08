@@ -1,7 +1,7 @@
 import renderToDOM from '../../helpers/renderToDOM';
 import clearDom from '../../helpers/clearDom';
 
-const addCardForm = (uid, obj = {}) => {
+const addCardForm = (obj = {}) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-card--${obj.firebaseKey}` : 'submit-card'}" class="mb-4">
@@ -16,7 +16,7 @@ const addCardForm = (uid, obj = {}) => {
       <div class="form-group">
         <label for="title">Language/Tech</label>
         <input type="text" class="form-control" id="languageTech" placeholder="Language/Tech" value="${obj.languageTech || ''}" required>
-      </div>
+      </div> 
       <button type="submit" class="btn btn-primary mt-3">Submit Card</button>
     </form>`;
 

@@ -1,4 +1,5 @@
 import { deleteCard, getCards, getSingleCard } from '../../../api/cardData';
+import clearDom from '../../helpers/clearDom';
 import { showCards } from '../cardsPage';
 import addCardForm from '../Forms/addCardForm';
 
@@ -22,6 +23,7 @@ const domEvents = (uid) => {
     }
 
     const languageFilter = (language) => {
+      clearDom();
       if (e.target.id.includes(`${language}`)) {
         const langArray = [];
         getCards(uid).then((cardArray) => {
