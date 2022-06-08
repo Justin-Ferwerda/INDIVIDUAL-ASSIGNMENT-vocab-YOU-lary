@@ -13,7 +13,7 @@ const startApp = (user) => {
   formEvents(user.uid);
   navBar();
   filterButtons();
-  navEvents();
+  navEvents(user.uid);
   getCards(user.uid).then((cardsArray) => showCards(cardsArray));
 };
 
