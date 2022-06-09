@@ -1,5 +1,5 @@
 const sortAlpha = (cardArray) => {
-  cardArray.sort((a, b) => a.title.localeCompare(b.title));
+  cardArray.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
   return cardArray;
 };
 
