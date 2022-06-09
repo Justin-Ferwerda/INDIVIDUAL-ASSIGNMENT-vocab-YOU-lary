@@ -18,7 +18,7 @@ const showCards = (array) => {
       </div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item">${card.timeSubmitted}</li>
-        <li class="list-group-item">${card.languageTech}</li>
+        <li class="list-group-item"><strong>Language:</strong> ${card.languageTech}</li>
       </ul>
       <div class="card-body">
       <i id="edit-card--${card.firebaseKey}" class="fas fa-edit btn btn-info"></i>

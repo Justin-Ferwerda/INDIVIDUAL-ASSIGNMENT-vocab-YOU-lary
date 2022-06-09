@@ -13,10 +13,14 @@ const addCardForm = (uid, obj = {}) => {
         <label for="image">Definition</label>
         <input type="text" class="form-control" id="definition" placeholder="Definition" value="${obj.definition || ''}" required>
       </div>
-      <div class="form-group">
-        <label for="title">Language/Tech</label>
-        <input type="text" class="form-control" id="languageTech" placeholder="Language/Tech" value="${obj.languageTech || ''}" required>
-      </div> 
+      <br>
+      <select class="form-select" aria-label="Default select example" id="languageTech">
+        <option selected>Choose a Language</option>
+        <option value="javascript">javascript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="python">python</option>
+      </select>
       <button type="submit" class="btn btn-primary mt-3">Submit Card</button>
     </form>`;
 
