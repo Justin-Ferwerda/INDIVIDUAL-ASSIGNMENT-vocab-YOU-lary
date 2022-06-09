@@ -20,6 +20,18 @@ const navEvents = (uid) => {
   document.querySelector('#oldest').addEventListener('click', () => {
     getCards(uid).then((cardArray) => showCards(sortTimeOldest(cardArray)));
   });
+
+  document.querySelector('#search-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    getCards(uid).then((cardsArray) => {
+      const searchString = document.querySelector('#search-text').value.toLowerCase();
+      const filteredCards = cardsArray.filter((card) => (
+        card.title.toLowerCase().includes(searchString) || card.definition.toLowerCase().includes(searchString) || card.languageTech.toLowerCase().includes(searchString)
+      ));
+      showCards(filteredCards);
+      document.querySelector('#search-text').value = '';
+    });
+  });
 };
 
 export default navEvents;
