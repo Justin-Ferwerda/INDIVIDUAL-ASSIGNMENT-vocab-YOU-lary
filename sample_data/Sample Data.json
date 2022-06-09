@@ -1,0 +1,36 @@
+{
+  "cards": {
+    "-N48EVvoMxS6V2iYn-Kv": {
+      "definition": "The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.",
+      "firebaseKey": "-N48EVvoMxS6V2iYn-Kv",
+      "languageTech": "javascript",
+      "timeSubmitted": "6-9-2022 11:13:32",
+      "title": "javascript promises",
+      "uid": "T1bdTsXHEyX3RQdbPmLbjd0UYdh1"
+    },
+    "-N48EhYMaqPqep0Dv0Zu": {
+      "definition": "A semantic element clearly describes its meaning to both the browser and the developer.",
+      "firebaseKey": "-N48EhYMaqPqep0Dv0Zu",
+      "languageTech": "HTML",
+      "timeSubmitted": "6-9-2022 11:14:24",
+      "title": "semantic element",
+      "uid": "T1bdTsXHEyX3RQdbPmLbjd0UYdh1"
+    },
+    "-N48F4aQk_TOz5FpZXaq": {
+      "definition": "Classes that are applied to elements based on information that is not present in the markup, e.g. :first-child or :last-child.",
+      "firebaseKey": "-N48F4aQk_TOz5FpZXaq",
+      "languageTech": "CSS",
+      "timeSubmitted": "6-9-2022 11:16:2",
+      "title": "pseudo-Classes",
+      "uid": "T1bdTsXHEyX3RQdbPmLbjd0UYdh1"
+    },
+    "-N48FEwQuP6PSCCMojrm": {
+      "definition": "Tuples are used to store multiple items in a single variable.  Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.  A tuple is a collection which is ordered and unchangeable.  Tuples are written with round brackets.",
+      "firebaseKey": "-N48FEwQuP6PSCCMojrm",
+      "languageTech": "python",
+      "timeSubmitted": "6-9-2022 11:16:45",
+      "title": "tuple",
+      "uid": "T1bdTsXHEyX3RQdbPmLbjd0UYdh1"
+    }
+  }
+}
