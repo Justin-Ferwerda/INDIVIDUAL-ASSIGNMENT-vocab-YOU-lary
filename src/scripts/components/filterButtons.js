@@ -3,7 +3,7 @@ import renderToDOM from '../helpers/renderToDOM';
 const filterButtons = () => {
   const buttonString = `<div class="btn-group btn-group-toggle" data-toggle="buttons" id="filterbtn">
   <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="all-languages" autocomplete="off" checked> All Languages
+    <input type="radio" name="options" id="all-languages" autocomplete="off" checked> All My Cards
   </label>
   <label class="btn btn-secondary">
     <input type="radio" name="options" id="javascript" autocomplete="off"> Javascript

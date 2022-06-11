@@ -23,9 +23,9 @@ const navBar = () => {
             Order Cards By
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" id="alphabetical" href="#">Alphabetical</a></li>
-            <li><a class="dropdown-item" id="newest" href="#">Newest</a></li>
-            <li><a class="dropdown-item" id="oldest" href="#">Oldest</a></li>
+            <li><a class="dropdown-item" id="alphabetical" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Alphabetical</a></li>
+            <li><a class="dropdown-item" id="newest" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Newest</a></li>
+            <li><a class="dropdown-item" id="oldest" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Oldest</a></li>
           </ul>
         </li>
       </ul>
