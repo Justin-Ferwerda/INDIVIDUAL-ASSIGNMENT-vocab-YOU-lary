@@ -21,6 +21,19 @@ const addCardForm = (uid, obj = {}) => {
         <option value="CSS">CSS</option>
         <option value="python">python</option>
       </select>
+      <br>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="public">
+        <label class="form-check-label" for="flexRadioDefault1">
+         Public
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="private" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          Private
+        </label>
+      </div>
       <button type="submit" class="btn btn-primary mt-3">Submit Card</button>
     </form>`;
 

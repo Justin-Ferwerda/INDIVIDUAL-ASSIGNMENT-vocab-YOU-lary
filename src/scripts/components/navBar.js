@@ -10,10 +10,13 @@ const navBar = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" id="create-card" aria-current="page" href="#">Create Card</a>
+          <a class="nav-link active" id="create-card" aria-current="page" href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Create Card</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="logout"  href="#">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="community"  href="#" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Community</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
