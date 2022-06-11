@@ -11,6 +11,7 @@ const formEvents = (uid) => {
         definition: document.querySelector('#definition').value,
         languageTech: document.querySelector('#languageTech').value,
         timeSubmitted: time(),
+        public: document.querySelector('#public').checked,
         uid
       };
       createCard(vocabCard).then((cardsArray) => showCards(cardsArray));
@@ -22,6 +23,7 @@ const formEvents = (uid) => {
         title: document.querySelector('#title').value,
         definition: document.querySelector('#definition').value,
         languageTech: document.querySelector('#languageTech').value,
+        public: document.querySelector('#public').checked,
         firebaseKey,
         uid
       };

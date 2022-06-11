@@ -1,7 +1,7 @@
 import addCardForm from '../Forms/addCardForm';
 import signOut from '../../helpers/signOut';
 import { sortAlpha, sortTimeNewest, sortTimeOldest } from '../../helpers/sort';
-import { getCards } from '../../../api/cardData';
+import { getCards, getPublicCards } from '../../../api/cardData';
 import { showCards } from '../cardsPage';
 
 const navEvents = (uid) => {
@@ -31,6 +31,10 @@ const navEvents = (uid) => {
       showCards(filteredCards);
       document.querySelector('#search-text').value = '';
     });
+  });
+
+  document.querySelector('#community').addEventListener('click', () => {
+    getPublicCards().then((cardArray) => showCards(Object.values(cardArray)));
   });
 };
 

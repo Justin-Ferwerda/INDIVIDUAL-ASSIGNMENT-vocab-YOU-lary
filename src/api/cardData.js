@@ -3,7 +3,6 @@ import firebaseConfig from './apiKeys';
 
 const dbUrl = firebaseConfig.databaseURL;
 
-// TODO: Get all cards
 const getCards = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/cards/.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
@@ -16,14 +15,12 @@ const getCards = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-// TODO: Get single card
 const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/cards/${firebaseKey}.json`)
     .then((response) => resolve(response.data))
     .catch((error) => reject(error));
 });
 
-// TODO: Create Card
 const createCard = (cardObject) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/cards.json`, cardObject)
     .then((response) => {
@@ -35,7 +32,6 @@ const createCard = (cardObject) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
-// TODO: Delete Card
 const deleteCard = (firebaseKey, uid) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/cards/${firebaseKey}.json`)
     .then(() => {
@@ -44,7 +40,6 @@ const deleteCard = (firebaseKey, uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-// TODO: Update Card
 const updateCard = (cardObject) => new Promise((resolve, reject) => {
   axios.patch(`${dbUrl}/cards/${cardObject.firebaseKey}.json`, cardObject)
     .then(() => {
@@ -53,8 +48,18 @@ const updateCard = (cardObject) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-// TODO: filter Card by Language
+const getPublicCards = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cards/.json?orderBy="public"&equalTo=true`)
+    .then((response) => resolve(response.data))
+    .catch((error) => reject(error));
+});
+
+const getPrivateCards = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/cards/.json?orderBy="uid"&equalTo="${uid}"`)
+    .then(resolve)
+    .catch((error) => reject(error));
+});
 
 export {
-  getCards, getSingleCard, createCard, deleteCard, updateCard
+  getCards, getSingleCard, createCard, deleteCard, updateCard, getPrivateCards, getPublicCards
 };
