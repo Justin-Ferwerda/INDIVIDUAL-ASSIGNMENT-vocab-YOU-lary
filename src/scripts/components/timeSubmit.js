@@ -1,7 +1,6 @@
 const time = () => {
-  const today = new Date();
-  const date = `${today.getMonth() + 1}-${today.getDate()}-${today.getFullYear()} ${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
-  return date;
+  const timeStamp = new Date().toLocaleString();
+  return timeStamp;
 };
 
 export default time;

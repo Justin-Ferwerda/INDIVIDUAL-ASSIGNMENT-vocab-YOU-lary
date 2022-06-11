@@ -3,7 +3,7 @@ import renderToDOM from '../helpers/renderToDOM';
 const navBar = () => {
   const domString = `<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-5">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">vocab-YOU-lary</a>
+    <a class="navbar-brand" href="#">Vocab-YOU-lary</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +31,7 @@ const navBar = () => {
       </ul>
       <form class="d-flex" id="search-form" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" id ="search-text" aria-label="Search">
-        <button class="btn btn-outline-success" id="search-button" type="submit">Search</button>
+        <button class="btn btn-outline-success" id="search-button" type="submit" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Search</button>
       </form>
     </div>
   </div>
